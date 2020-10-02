@@ -21,6 +21,7 @@ pub fn pid(pname: &str) -> usize {
 
     let mut _pid: &usize = &0;
 
+    // TODO: replace with normal winapi functions later
     for (pid, process) in s.get_processes() {
         if process.name() == pname {
             _pid = pid;
